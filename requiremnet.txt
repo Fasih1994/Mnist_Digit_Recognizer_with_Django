@@ -1,0 +1,6 @@
+tensorflow
+django
+scipy
+keras
+numpy
+h5py
