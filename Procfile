@@ -1,1 +1,1 @@
-web: gunicorn gattingstarted.wsgi --log-file -
+web: gunicorn mnist_test.wsgi
