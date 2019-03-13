@@ -4,3 +4,5 @@ scipy
 keras
 numpy
 h5py
+django-heroku
+gunicorn

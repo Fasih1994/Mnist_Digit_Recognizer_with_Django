@@ -12,13 +12,12 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 from os.path import join
-
-from django.conf.global_settings import STATIC_ROOT, STATICFILES_DIRS
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_DIR = os.path.join(BASE_DIR,'static')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -123,5 +122,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[
-    STATIC_ROOT,
+    STATIC_DIR,
 ]
+django_heroku.settings(locals())
